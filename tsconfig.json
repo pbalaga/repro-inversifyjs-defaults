@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "importHelpers": true,
+        "downlevelIteration": true, 
+        "lib": ["DOM", "ES2019", "ScriptHost"],
+        "target": "ES5",
+        "sourceMap": true
+    }
+}
