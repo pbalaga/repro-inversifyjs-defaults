@@ -44,3 +44,13 @@ console.log('without default', childContainer.get(ComponentWithoutDefault).confi
 
 console.log(ComponentWithDefault.length);
 console.log(ComponentWithoutDefault.length);
+
+function printMetadata(target: Constructor) {
+    console.log('Metadata of: ', target.name)
+    for (const metadataKey of Reflect.getMetadataKeys(target)) {
+        console.log('\t', metadataKey, Reflect.getMetadata(metadataKey, target));
+    }
+}
+
+printMetadata(ComponentWithDefault);
+printMetadata(ComponentWithoutDefault);
