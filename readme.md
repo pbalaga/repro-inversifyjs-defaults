@@ -15,3 +15,4 @@ Extra info:
 - Inversify determines the number of parameters it has to inject into a function by using [`Function.length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) - see [source code](https://github.com/inversify/InversifyJS/blob/89ecfd7cf8270ec77ea4a896d5519c6ab92d8161/src/planning/reflection_utils.ts#L37).
 - `Function.length` "excludes the rest parameter and only includes parameters before the first one with a default value". So it returns `2` for `ComponentWithoutDefault`'s constructor and `1` for `ComponentWithDefault`'s constructor. This works as expected.
 - However, as a result, Inversify only injects 1 parameter into `ComponentWithDefault`. Because of that the 2nd parameter value is never different from default.
+- One more thing is that metadata seems to not be added to optional constructor parameters. (Possibly, that's why Inversify cannot recognize what kind of dependency it is.)
