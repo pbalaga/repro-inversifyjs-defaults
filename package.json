@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npx tsc --build tsconfig.json",
-    "reproduce": "npm run build && node repro.js"
+    "start": "npx parcel index.html"
   },
   "author": "",
   "license": "ISC",
